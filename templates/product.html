@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Toko Online</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Detail Produk</h1>
+    </header>
+    <main>
+        <section class="product-detail">
+            <img src="{{ product['image'] }}" alt="{{ product['name'] }}">
+            <h2>{{ product['name'] }}</h2>
+            <p>Harga: {{ product['price'] }}</p>
+            <p>{{ product['description'] }}</p>
+            <a href="/checkout/{{ product['id'] }}">Beli Sekarang</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Toko Online. All rights reserved.</p>
+    </footer>
+</body>
+</html>

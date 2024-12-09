@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <form action="/process_checkout" method="POST">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="address">Alamat:</label>
+            <textarea id="address" name="address" required></textarea>
+            
+            <label for="product">Produk:</label>
+            <input type="text" id="product" name="product" value="{{ product['name'] }}" readonly>
+            
+            <label for="price">Harga:</label>
+            <input type="text" id="price" name="price" value="{{ product['price'] }}" readonly>
+            
+            <button type="submit">Bayar</button>
+        </form>
+    </main>
+    <footer class='posisi'>
+        <p>&copy; 2024 Toko Online. All rights reserved.</p>
+    </footer>
+</body>
+</html>
